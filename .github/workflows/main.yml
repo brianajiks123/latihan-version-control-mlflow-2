@@ -10,7 +10,11 @@ on:
  
 env:
   CSV_URL: "MLproject/train_pca.csv"
- 
+
+permissions:
+  contents: write  # Allow GitHub Actions to push changes to the repository
+  actions: write   # If necessary for specific actions that require more permissions
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -56,8 +60,8 @@ jobs:
       # Save models to GitHub Repository
       - name: Save mlruns to repo
         run: |
-           git config --global user.name ${{ secrets.username }}
-           git config --global user.email ${{ secrets.email }}
+           git config --global user.name ${{ secrets.USERNAME }}
+           git config --global user.email ${{ secrets.EMAIL }}
            git add -f mlruns/
            git commit -m "Save mlruns from CI run" || true
            git push origin main
