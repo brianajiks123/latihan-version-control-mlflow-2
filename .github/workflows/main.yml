@@ -49,7 +49,9 @@ jobs:
            git lfs track "mlruns/**"
            git add .gitattributes
            git commit -m "Track large files in mlruns with Git LFS" || true
-           git push origin main
+           git push https://github.com/${{ github.repository }}.git HEAD:main
+        env:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Save models to GitHub Repository
       - name: Save mlruns to repo
