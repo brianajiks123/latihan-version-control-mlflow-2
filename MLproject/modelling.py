@@ -2,7 +2,7 @@ import mlflow, pandas as pd, numpy as np, os, warnings, sys
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-mlflow.set_tracking_uri('http://localhost:5001')
+# mlflow.set_tracking_uri('http://localhost:5001')
 
 if __name__ == "__main__":
     warnings.filterwarnings("ignore")
