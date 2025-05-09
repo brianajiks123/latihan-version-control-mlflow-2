@@ -43,7 +43,7 @@ jobs:
       # Run script directly instead of mlflow run
       - name: Run modelling script
         run: |
-          python modellingopt.py
+          python MLproject/modellingopt.py
       
       # Setup Git LFS
       - name: Set up Git LFS
