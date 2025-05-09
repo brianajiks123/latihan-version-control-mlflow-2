@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 # Set tracking URI
-mlflow.set_tracking_uri('http://localhost:5001')  # 5000 is already busy
+# mlflow.set_tracking_uri('http://localhost:5001')  # 5000 is already busy
 
 # Create a new MLflow Experiment
 mlflow.set_experiment("Latihan Credit Scoring")
